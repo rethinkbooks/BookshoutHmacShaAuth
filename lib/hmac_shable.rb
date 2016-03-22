@@ -1,5 +1,5 @@
 require 'open-uri'
-require 'activesupport'
+require 'active_support/concern'
 module BookshoutHmacShaAuth::HmacShable
   extend ::ActiveSupport::Concern
 
