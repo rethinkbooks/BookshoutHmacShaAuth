@@ -1,6 +1,6 @@
 require 'open-uri'
 module BookshoutHmacShaAuth::HmacShable
-  extend ActiveSupport::Concern
+  extend ::ActiveSupport::Concern
 
   def handle_auth
 
