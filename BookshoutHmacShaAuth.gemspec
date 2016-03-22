@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Eric Roos"]
   spec.email         = ["eric@bookshout.com"]
   spec.summary       = "Gem containing a ActiveSupport concern for habling HmacSha auth"
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.description   = ""
   spec.homepage      = ""
   spec.license       = "MIT"
 
