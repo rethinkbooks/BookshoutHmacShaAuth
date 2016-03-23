@@ -22,7 +22,7 @@ module BookshoutHmacShaAuth::HmacShable
     Rails.logger.debug "Content-Type: #{request.headers["Content-Type"]}"
     param_str   = ""
     param_list.split(",").each do |param|
-      param_str << (params[param.to_sym] || "") 
+      param_str << (params[param.to_sym].to_s || "") 
       Rails.logger.debug param_str
     end 
     Rails.logger.debug "Param str: #{param_str}"
