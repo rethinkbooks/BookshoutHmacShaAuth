@@ -12,9 +12,9 @@ module BookshoutHmacShaAuth::HmacShable
     
 
     Rails.logger.debug "Handling Auth for headers #{request.headers}"
-    timestamp   = request.headers["X-Bs-Timestamp"]  || ""
-    param_list  = request.headers["X-Bs-Param-List"] || ""
-    signature   = request.headers["X-Bs-Signature"]  || ""
+    timestamp   = request.headers["X-Bs-Timestamp"]
+    param_list  = request.headers["X-Bs-Param-List"]
+    signature   = request.headers["X-Bs-Signature"]
    
     datetime = DateTime.parse(timestamp)
     Rails.logger.debug "Timestamp: #{datetime}"
