@@ -9,6 +9,9 @@ module BookshoutHmacShaAuth::HmacShable
     #user_id     = params[:user_id]
 
     # auth params
+    
+
+    Rails.logger.debug "Handling Auth for headers #{request.headers}"
     timestamp   = request.headers["X-Bs-Timestamp"]  || ""
     param_list  = request.headers["X-Bs-Param-List"] || ""
     signature   = request.headers["X-Bs-Signature"]  || ""
