@@ -17,7 +17,7 @@ module BookshoutHmacShaAuth::HmacShable
     signature   = request.headers["X-Bs-Signature"]  || ""
    
     datetime = DateTime.parse(timestamp)
-    Rails.logger.debug "Timestamp: #{timestamp}"
+    Rails.logger.debug "Timestamp: #{datetime}"
     Rails.logger.debug "ParamList: #{param_list}"
     Rails.logger.debug "Content-Type: #{request.headers["Content-Type"]}"
     param_str   = ""
