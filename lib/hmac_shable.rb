@@ -23,7 +23,6 @@ module BookshoutHmacShaAuth::HmacShable
     param_str   = ""
     param_list.split(",").each do |param|
       param_str << (params[param.to_sym].to_s || "") 
-      Rails.logger.debug param_str
     end 
     Rails.logger.debug "Param str: #{param_str}"
     computed_signature = BookshoutHmacShaAuth::HmacShaGenerator.build_signature timestamp,param_str
