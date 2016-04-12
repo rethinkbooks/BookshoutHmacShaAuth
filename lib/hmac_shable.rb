@@ -46,5 +46,13 @@ module BookshoutHmacShaAuth::HmacShable
     end
   end
 
+  def handle_grape_auth
+    begin
+      handle_auth
+      return true
+    rescue
+      return false
+    end
+  end
 
 end
