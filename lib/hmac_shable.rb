@@ -25,7 +25,8 @@ module BookshoutHmacShaAuth::HmacShable
       param_str << (params[param.to_sym].to_s || "")
     end
     Rails.logger.debug "Param str: #{param_str}"
-    computed_signature = BookshoutHmacShaAuth::HmacShaGenerator.build_signature timestamp,param_str
+    app_name = YAML.load_file("#{Rails.root}/config/hmac_sha_envs.yml")["app_name"]
+    computed_signature = BookshoutHmacShaAuth::HmacShaGenerator.build_signature timestamp,param_str,app_name
     computed_signature = URI::encode(computed_signature.strip)
     Rails.logger.debug "#{signature}|"
     Rails.logger.debug "#{computed_signature}|"
