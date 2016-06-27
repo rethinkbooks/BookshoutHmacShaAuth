@@ -11,6 +11,6 @@ class BookshoutHmacShaAuth::HmacShaGenerator
     data = timestamp_str + params_string
     digest = OpenSSL::Digest.new('sha1')
     hmac = OpenSSL::HMAC.digest(digest, key, data)
-    Base64.encode64(hmac)
+    Base64.encode64(hmac).strip
   end
 end
