@@ -21,7 +21,7 @@ module BookshoutHmacShaAuth::HmacShable
     successfull_attempt = signature == computed_signature
     Rails.logger.debug "Access: #{successfull_attempt}"
 
-    if datetime < DateTime.now-1.minute
+    if datetime < DateTime.now-25.minute
       Rails.logger.debug "INVALID TIMESTAMP"
       render(json: {:message => "Invalid timestamp. Too far in the past. Request expired."}, :status => 401 )
     end
