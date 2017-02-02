@@ -2,8 +2,8 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'BookshoutHmacShaAuth/version'
-require 'hmac_shable'
-require 'hmac_sha_generator'
+# require 'hmac_shable'
+# require 'hmac_sha_generator'
 
 Gem::Specification.new do |spec|
   spec.name          = "BookshoutHmacShaAuth"
